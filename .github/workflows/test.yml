@@ -8,6 +8,6 @@ jobs:
         platform: [ubuntu-latest, macos-latest, windows-latest]
     runs-on: ${{ matrix.platform }}
     steps:
-    - run: echo "action_state=yellow" >> $GITHUB_ENV
-    - run: echo "action_state=red" >> $GITHUB_ENV
-    - run: echo "action_state is $action_state"
+    - run: echo "PATH:$PATH"
+    - run: echo "PATH=/blah:$PATH" >> $GITHUB_ENV
+    - run: echo "PATH:$PATH"
